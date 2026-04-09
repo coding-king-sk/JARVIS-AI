@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.jarvis.ai"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    // AndroidX
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.core:core:1.12.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime:2.6.2'
+    
+    // Material Design
+    implementation 'com.google.android.material:material:1.11.0'
+    
+    // Kotlin
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.20'
+    
+    // Claude AI SDK
+    implementation 'com.anthropic:sdk:0.1.0'
+    
+    // OkHttp for HTTP requests
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+    
+    // Retrofit for API calls
+    implementation 'com.squareup.retrofit2:retrofit:2.10.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.10.0'
+    
+    // Gson for JSON
+    implementation 'com.google.code.gson:gson:2.10.1'
+    
+    // Wake word detection (PocketSphinx)
+    implementation 'edu.cmu.pocketsphinx:pocketsphinx-android:5prealpha'
+    
+    // Text-to-Speech
+    implementation 'androidx.tts:tts:1.0.0-alpha02'
+    
+    // SQLite
+    implementation 'androidx.sqlite:sqlite:2.4.0'
+    implementation 'androidx.room:room-runtime:2.6.1'
+    annotationProcessor 'androidx.room:room-compiler:2.6.1'
+    
+    // Image loading
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+    
+    // Video processing (FFmpeg)
+    implementation 'com.arthenica:mobile-ffmpeg-full:4.4'
+    
+    // Animation
+    implementation 'com.airbnb.android:lottie:6.1.0'
+    
+    // Permissions
+    implementation 'androidx.activity:activity:1.8.0'
+    
+    // Background tasks
+    implementation 'androidx.work:work-runtime:2.8.1'
+    
+    // Logging
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+}
